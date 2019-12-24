@@ -1,0 +1,48 @@
+{
+  "name": "firebase-auth-hasura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "apollo-boost": "^0.4.7",
+    "apollo-cache-inmemory": "latest",
+    "apollo-client": "latest",
+    "apollo-link": "latest",
+    "apollo-link-http": "latest",
+    "apollo-link-ws": "^1.0.19",
+    "apollo-utilities": "latest",
+    "firebase": "^7.6.1",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.12.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.12.0",
+    "subscriptions-transport-ws": "^0.9.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "apollo-cache-inmemory": "latest",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react-hot-loader": "^4.12.18",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
