@@ -1,0 +1,140 @@
+- args:
+    allowlist: []
+    functions: []
+    query_collections: []
+    remote_schemas: []
+    tables:
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions:
+      - comment: null
+        permission:
+          filter:
+            user_id:
+              _eq: X-Hasura-User-Id
+        role: user
+      event_triggers: []
+      insert_permissions:
+      - comment: null
+        permission:
+          check:
+            user_id:
+              _eq: X-Hasura-User-Id
+          columns:
+          - name
+          - user_id
+          set: {}
+        role: user
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: programming_language
+        using:
+          foreign_key_constraint_on: name
+      select_permissions:
+      - comment: null
+        permission:
+          allow_aggregations: false
+          columns:
+          - name
+          - user_id
+          computed_fields: []
+          filter: {}
+        role: anonymous
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - name
+          - user_id
+          computed_fields: []
+          filter: {}
+        role: user
+      table: loved_language
+      update_permissions:
+      - comment: null
+        permission:
+          columns:
+          - name
+          - user_id
+          filter:
+            user_id:
+              _eq: X-Hasura-User-Id
+          set: {}
+        role: user
+    - array_relationships:
+      - comment: null
+        name: loved_languages
+        using:
+          foreign_key_constraint_on:
+            column: name
+            table: loved_language
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions:
+      - comment: null
+        permission:
+          check: {}
+          columns:
+          - vote_count
+          - name
+          set: {}
+        role: user
+      is_enum: false
+      object_relationships: []
+      select_permissions:
+      - comment: null
+        permission:
+          allow_aggregations: false
+          columns:
+          - name
+          - vote_count
+          computed_fields: []
+          filter: {}
+        role: anonymous
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - name
+          - vote_count
+          computed_fields: []
+          filter: {}
+        role: user
+      table: programming_language
+      update_permissions:
+      - comment: null
+        permission:
+          columns:
+          - vote_count
+          filter: {}
+          set: {}
+        role: anonymous
+      - comment: null
+        permission:
+          columns:
+          - vote_count
+          filter: {}
+          set: {}
+        role: user
+    version: 2
+  type: replace_metadata

@@ -1,4 +1,6 @@
-src/config.js
+**/*config.*
+!**/*config-copy.*
+
 docker-compose.yaml
 node_modules/
 .idea
